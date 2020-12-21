@@ -1,7 +1,7 @@
 <template>
   <div class="camera">
     <video autoplay></video>
-    <button></button>
+    <button>ELO</button>
   </div>
 </template>
 
@@ -16,7 +16,12 @@ export default {
         "mediaDevices" in navigator &&
         "getUserMedia" in navigator.mediaDevices
       ) {
-        navigator.mediaDevices.getUserMedia({ video: true }).then((stream) => {
+        let constraints = {
+          video: {
+            height: { ideal: 1024 },
+          },
+        };
+        navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
           const videoPlayer = document.querySelector("video");
           videoPlayer.srcObject = stream;
           videoPlayer.play();
