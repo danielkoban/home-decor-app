@@ -16,12 +16,7 @@ export default {
         "mediaDevices" in navigator &&
         "getUserMedia" in navigator.mediaDevices
       ) {
-        let constraints = {
-          video: {
-            height: { ideal: 1024 },
-          },
-        };
-        navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
+        navigator.mediaDevices.getUserMedia({ video: true }).then((stream) => {
           const videoPlayer = document.querySelector("video");
           videoPlayer.srcObject = stream;
           videoPlayer.play();
