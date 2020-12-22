@@ -1,12 +1,15 @@
 <template>
-  <div>
-    <h1>Hello, World!</h1>
-  </div>
+  <camera></camera>
 </template>
 
 <script>
+import Camera from "./components/Camera.vue";
+
 export default {
   name: "App",
+  components: {
+    Camera,
+  },
 };
 </script>
 
