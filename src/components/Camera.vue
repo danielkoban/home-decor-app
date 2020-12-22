@@ -1,6 +1,6 @@
 <template>
   <div class="camera">
-    <video autoplay class="w-screen h-screen fixed z-10 object-cover"></video>
+    <video autoplay class="w-screen h-4/5 fixed object-cover"></video>
   </div>
 </template>
 
