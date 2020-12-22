@@ -1,6 +1,9 @@
 <template>
-  <div class="camera">
-    <video autoplay class="w-screen h-4/5 fixed object-cover"></video>
+  <div class="camera w-screen h-screen">
+    <video autoplay class="w-screen h-screen fixed object-cover"></video>
+    <button
+      class="w-16 h-16 mx-auto absolute inset-x-0 bottom-8 rounded-full border-4 focus:outline-none"
+    ></button>
   </div>
 </template>
 
