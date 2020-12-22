@@ -1,7 +1,6 @@
 <template>
   <div class="camera">
-    <video autoplay></video>
-    <button>ELO</button>
+    <video autoplay class="w-screen h-screen fixed z-10 object-cover"></video>
   </div>
 </template>
 
@@ -16,7 +15,17 @@ export default {
         "mediaDevices" in navigator &&
         "getUserMedia" in navigator.mediaDevices
       ) {
-        navigator.mediaDevices.getUserMedia({ video: true }).then((stream) => {
+        let constraints = {
+          video: {
+            width: {
+              ideal: screen.width,
+            },
+            height: {
+              ideal: screen.height,
+            },
+          },
+        };
+        navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
           const videoPlayer = document.querySelector("video");
           videoPlayer.srcObject = stream;
           videoPlayer.play();
