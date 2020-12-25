@@ -3,6 +3,7 @@
     <video autoplay class="w-screen h-screen object-cover"></video>
     <button
       class="w-16 h-16 mx-auto absolute inset-x-0 bottom-8 rounded-full border-4 focus:outline-none"
+      @click="takePicture"
     ></button>
   </div>
 </template>
@@ -13,7 +14,7 @@ import { onMounted } from "vue";
 export default {
   name: "Camera",
 
-  setup() {
+  setup(_, context) {
     function init() {
       if (
         "mediaDevices" in navigator &&
@@ -39,12 +40,17 @@ export default {
       }
     }
 
+    function takePicture() {
+      context.emit("take-picture");
+    }
+
     onMounted(() => {
       init();
     });
 
     return {
       init,
+      takePicture,
     };
   },
 };
