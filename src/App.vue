@@ -1,17 +1,20 @@
 <template>
   <camera @take-picture="takePicture"></camera>
+  <items></items>
   <gallery></gallery>
 </template>
 
 <script>
 import Camera from "./components/Camera.vue";
 import Gallery from "./components/Gallery.vue";
+import Items from "./components/Items.vue";
 
 export default {
   name: "App",
   components: {
     Camera,
     Gallery,
+    Items,
   },
   setup() {
     function takePicture() {
