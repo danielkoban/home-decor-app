@@ -2,7 +2,7 @@ import { reactive } from 'vue';
 
 // state
 
-export const items = reactive([
+const items = reactive([
     {
         id: 1,
         url:
@@ -29,3 +29,5 @@ export const items = reactive([
             "https://images.pexels.com/photos/2224861/pexels-photo-2224861.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     },
 ]);
+
+export default { items } 
