@@ -9,7 +9,17 @@
 </template>
 
 <script>
-export default {};
+import { computed } from "vue";
+import { useStore } from "vuex";
+
+export default {
+  setup() {
+    const store = useStore();
+    const items = computed(() => store.state.items);
+
+    return { items };
+  },
+};
 </script>
 
 <style>
