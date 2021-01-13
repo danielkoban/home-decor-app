@@ -9,17 +9,7 @@
 </template>
 
 <script>
-import vclone from "@/vclone/";
-
-export default {
-  setup() {
-    const { items } = vclone;
-
-    return {
-      items,
-    };
-  },
-};
+export default {};
 </script>
 
 <style>
