@@ -28,15 +28,21 @@ const store = createStore({
     mutations: {
         setItems(state, payload) {
             state.items = payload
-        }
+        },
+
+        // selectItem(state, id) {
+        //     state.items = state.items.filter(item => item.id != id);
+        // }
     },
     actions: {
-
+        // selectItem({ commit, state }, id) {
+        //     commit("selectItem", id)
+        // }
     },
     getters: {
         setItems(state) {
             return state.items
-        }
+        },
     }
 })
 
