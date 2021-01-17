@@ -2,8 +2,8 @@
   <li
     v-for="item in items"
     :key="item.id"
-    class="flex-shrink-0 w-3/12 flex justify-center items-center"
-    :class="{ 'bg-red-800': currentItem === item.url }"
+    class="flex-shrink-0 w-3/12 md:w-2/12 flex justify-center items-center"
+    :class="{ active: currentItem === item.url }"
   >
     <img :src="item.url" :alt="item.title" class="p-6" @click="selectItem" />
   </li>
