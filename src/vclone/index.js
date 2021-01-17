@@ -35,7 +35,7 @@ const items = reactive([
 
 const selectItem = (e) => {
     const selectedItem = e.target.src;
-    currentItem.value = selectedItem
+    currentItem.value = selectedItem;
 }
 
 export default { currentItem, items, selectItem }
