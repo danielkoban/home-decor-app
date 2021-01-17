@@ -4,7 +4,7 @@
     :key="item.id"
     class="flex-shrink-0 w-3/12 flex justify-center items-center"
   >
-    <img :src="item.url" alt="" class="p-6" @click="selectItem" />
+    <img :src="item.url" :alt="item.title" class="p-6" @click="selectItem" />
   </li>
 </template>
 
