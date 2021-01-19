@@ -21,6 +21,7 @@ export default {
       console.log("take a picture");
 
       const picture = document.querySelector("canvas");
+      const selectedItem = document.querySelector(".selected-item");
       picture.width = window.innerWidth;
       picture.height = window.innerHeight;
       const ctx = picture.getContext("2d");
@@ -32,6 +33,13 @@ export default {
         0,
         picture.width,
         picture.height
+      );
+      ctx.drawImage(
+        selectedItem,
+        selectedItem.offsetTop,
+        selectedItem.offsetLeft,
+        selectedItem.offsetWidth,
+        selectedItem.offsetHeight
       );
     }
 
