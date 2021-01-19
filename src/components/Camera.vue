@@ -48,7 +48,9 @@ export default {
     }
 
     function takePicture() {
-      context.emit("take-picture");
+      !currentItem.value
+        ? alert("Choose a item")
+        : context.emit("take-picture");
     }
 
     onMounted(() => {
