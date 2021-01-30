@@ -2,10 +2,10 @@
   <div class="camera w-screen h-screen fixed z-10">
     <video autoplay class="w-screen h-screen object-cover"></video>
     <selected-item v-if="currentItem"></selected-item>
-    <button
-      class="w-16 h-16 mx-auto absolute inset-x-0 bottom-8 rounded-full border-4 focus:outline-none"
+    <a
+      class="block w-16 h-16 mx-auto absolute inset-x-0 bottom-8 rounded-full border-4 focus:outline-none"
       @click="takePicture"
-    ></button>
+    ></a>
   </div>
 </template>
 
