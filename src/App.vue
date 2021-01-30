@@ -41,6 +41,9 @@ export default {
         selectedItem.offsetWidth,
         selectedItem.offsetHeight
       );
+
+      let link = document.querySelector(".camera-trigger");
+      link.href = picture.toDataURL();
     }
 
     return {
