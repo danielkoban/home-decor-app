@@ -3,7 +3,8 @@
     <video autoplay class="w-screen h-screen object-cover"></video>
     <selected-item v-if="currentItem"></selected-item>
     <a
-      class="block w-16 h-16 mx-auto absolute inset-x-0 bottom-8 rounded-full border-4 focus:outline-none"
+      class="camera-trigger block w-16 h-16 mx-auto absolute inset-x-0 bottom-8 rounded-full border-4 focus:outline-none"
+      download="my-painting.png"
       @click="takePicture"
     ></a>
   </div>
