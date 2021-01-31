@@ -42,7 +42,7 @@ export default {
         selectedItem.offsetHeight
       );
 
-      let link = document.querySelector(".camera-trigger");
+      const link = document.querySelector(".camera-trigger");
       link.href = picture.toDataURL();
     }
 
